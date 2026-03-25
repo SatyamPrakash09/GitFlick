@@ -16,4 +16,11 @@ app.get('/',(req, res)=>{
     res.status(200).json("Server is Running!!!")
     console.log("\nServer Started")
 })
+
+//routes import
+import userRouter from "./routes/user.routes.js"
+
+app.use("/api/v1/users",userRouter)
+
+
 export { app }
